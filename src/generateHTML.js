@@ -1,5 +1,5 @@
 
-const generateHTML = ({ name, id, email, role }) =>
+const generateHTML = ({ name, id, email, number, options }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +12,10 @@ const generateHTML = ({ name, id, email, role }) =>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Name: ${name}</h1>
-    <p class="lead">Employee Id: ${id}.</p>
-    <p class="lead">Contact: ${email}.</p>
-    <p class="lead">Position: ${role}.</p>
+    <p class="lead">Employee Id: ${id}</p>
+    <p class="lead">Email: ${email}</p>
+    <p class="lead">Office number: ${number}</p>
+    <p class="lead">Team member: ${options}</p>
   </div>
 </div>
 </body>

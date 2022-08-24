@@ -24,20 +24,20 @@ function init() {
             message: 'What is your email address?',
         },
         {
+            type: 'input',
+            name: 'number',
+            message: 'What is your office number?',
+        },
+        {
             type: 'list',
-            name: 'role',
-            message: 'Please select your role.',
-            choices: ['Manager', 'Engineer', 'Intern'],
+            name: 'options',
+            message: 'Would you like to add a team member? Please select an option.',
+            choices: ['Engineer', 'Intern', 'None'],
         },
         // {
         //     type: 'input',
         //     name: 'github',
         //     message: 'What is your GitHub username?',
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'installation',
-        //     message: 'What command should be run to install dependencies?',
         // },
         // {
         //     type: 'input',
