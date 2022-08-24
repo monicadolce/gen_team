@@ -27,7 +27,7 @@ function init() {
             type: 'list',
             name: 'role',
             message: 'Please select your role.',
-            choices: ['Employee', 'Manager', 'Engineer', 'Intern'],
+            choices: ['Manager', 'Engineer', 'Intern'],
         },
         // {
         //     type: 'input',
