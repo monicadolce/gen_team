@@ -1,5 +1,5 @@
 
-const generateHTML = ({ name, id, email, number, team, options, github, school }) =>
+const generateHTML = ({ name, id, email, number, options, github, school }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
