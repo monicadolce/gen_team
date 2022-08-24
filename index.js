@@ -29,31 +29,26 @@ function init() {
             message: 'What is your office number?',
         },
         {
+            type: 'confirm',
+            name: 'team',
+            message: 'Would you like to add a team member?',
+        },
+        {
             type: 'list',
             name: 'options',
-            message: 'Would you like to add a team member? Please select an option.',
-            choices: ['Engineer', 'Intern', 'None'],
+            message: 'Please select one.',
+            choices: ['Engineer', 'Intern'],
         },
-        // {
-        //     type: 'input',
-        //     name: 'github',
-        //     message: 'What is your GitHub username?',
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'tests',
-        //     message: 'What command should be run to run tests?',
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'usage',
-        //     message: 'What does the user need to know about using the repo?',
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'contributing',
-        //     message: 'What does the user need to know about contributing to the repo?',
-        // },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Please enter GitHub username.',
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Please enter name of school.',
+        },
     ])  
 // Answers are written to index.html with arrow function and message is rendered with console.log
       .then((answers) => {

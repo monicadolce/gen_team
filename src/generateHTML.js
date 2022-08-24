@@ -1,5 +1,5 @@
 
-const generateHTML = ({ name, id, email, number, options }) =>
+const generateHTML = ({ name, id, email, number, team, options, github, school }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +16,8 @@ const generateHTML = ({ name, id, email, number, options }) =>
     <p class="lead">Email: ${email}</p>
     <p class="lead">Office number: ${number}</p>
     <p class="lead">Team member: ${options}</p>
+    <p class="lead">GitHub username: ${github}</p>
+    <p class="lead">School name: ${school}</p>
   </div>
 </div>
 </body>
