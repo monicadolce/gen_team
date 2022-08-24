@@ -2,3 +2,67 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateHTML = require('./src/generateHTML');
+
+// Function initializes app using inquirer
+function init() {
+    inquirer
+// Array of question prompts for user to answer and one list of roles to choose from
+    .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your Id?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+        },
+        {
+            type: 'list',
+            name: 'role',
+            message: 'Please select your role.',
+            choices: ['Employee', 'Manager', 'Engineer', 'Intern'],
+        },
+        // {
+        //     type: 'input',
+        //     name: 'github',
+        //     message: 'What is your GitHub username?',
+        // },
+        // {
+        //     type: 'input',
+        //     name: 'installation',
+        //     message: 'What command should be run to install dependencies?',
+        // },
+        // {
+        //     type: 'input',
+        //     name: 'tests',
+        //     message: 'What command should be run to run tests?',
+        // },
+        // {
+        //     type: 'input',
+        //     name: 'usage',
+        //     message: 'What does the user need to know about using the repo?',
+        // },
+        // {
+        //     type: 'input',
+        //     name: 'contributing',
+        //     message: 'What does the user need to know about contributing to the repo?',
+        // },
+    ])  
+// Answers are written to index.html with arrow function and message is rendered with console.log
+      .then((answers) => {
+        const htmlPageContent = generateHTML(answers);
+        fs.writeFile('dist/index.html', htmlPageContent, (err) =>
+        err ? console.log(err) : console.log('Successfully created index.html.')
+        );
+    });
+}
+
+// Function call to initialize app
+init();
