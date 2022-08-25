@@ -6,7 +6,7 @@ const generateHTML = ({ name, id, email, number, options, github, school }) =>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./dist/style.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
   <title>Team Profile</title>
 </head>
 <body>
