@@ -16,7 +16,7 @@ const generateHTML = ({ name, id, email, number, options, github, school }) =>
     <p class="lead"><a href="mailto:${email}">Send email</a></p>
     <p class="lead">Office number: ${number}</p>
     <p class="lead">Team member: ${options}</p>
-    <p class="lead">GitHub username:<a href = "https://github.com/monicadolce/gen_team" target="_blank"> ${github}</a></p>
+    <p class="lead">GitHub username:<a href = "https://github.com/${github}" target="_blank"> ${github}</a></p>
     <p class="lead">School name: ${school}</p>
   </div>
 </div>
