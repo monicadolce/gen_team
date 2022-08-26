@@ -60,7 +60,11 @@ const generateHTML = (employees) => {
     <h1 class="display-4 text-center">My Team</h1>
   </div>
   </div>
-  <div>${employeeHtml}</div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div>${employeeHtml}</div>
+    </div>
+  </div>
 </body>
 </html>`};
 
