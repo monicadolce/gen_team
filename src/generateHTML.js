@@ -1,6 +1,51 @@
 
-const generateHTML = ({ name, id, email, number, options, github, school }) =>
-  `<!DOCTYPE html>
+const generateHTML = (employees) => {
+  let employeeHtml = ""
+  for (let index = 0; index < employees.length; index++) {
+    const employee = employees[index];
+    if (employee.getRole()=== "Manager") {
+    employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
+    <div class="card-header">
+    <p>${employee.getName()}</p>
+    <p>${employee.getRole()}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: ${employee.getId()}</li>
+      <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+      <li class="list-group-item">Office number: ${employee.getOfficeNumber()}</li>
+    </ul>
+  </div>
+  </div>`      
+    } else if (employee.getRole() === "Engineer") {
+      employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
+      <div class="card-header">
+      <p>${employee.getName()}</p>
+      <p>${employee.getRole()}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Id: ${employee.getId()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+        <li class="list-group-item">Office number: ${employee.getGithub()}</li>
+      </ul>
+    </div>
+    </div>`    
+    } else {
+      employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
+      <div class="card-header">
+      <p>${employee.getName()}</p>
+      <p>${employee.getRole()}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Id: ${employee.getId()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+        <li class="list-group-item">Office number: ${employee.getSchool()}</li>
+      </ul>
+    </div>
+    </div>`    
+    }
+    
+  }
+ return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,21 +59,9 @@ const generateHTML = ({ name, id, email, number, options, github, school }) =>
   <div class="container">
     <h1 class="display-4 text-center">My Team</h1>
   </div>
-  <div class="card" style="width: 18rem;">
-  <div class="card-header">
-  <p>${name}</p>
-  <p>${options}</p>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Id: ${id}</li>
-    <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
-    <li class="list-group-item">Office number: ${number}</li>
-    <li class="list-group-item">GitHub: <a href = "https://github.com/${github}" target="_blank">${github}</a></li>
-    <li class="list-group-item">School: ${school}</li>
-  </ul>
-</div>
-</div>
+  <div>${employeeHtml}</div>
 </body>
-</html>`;
+</html>`};
 
 module.exports = generateHTML;
