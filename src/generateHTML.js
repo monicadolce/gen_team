@@ -25,7 +25,7 @@ const generateHTML = (employees) => {
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Id: ${employee.getId()}</li>
         <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
-        <li class="list-group-item">Office number: ${employee.getGithub()}</li>
+        <li class="list-group-item">GitHub username:<a href = "https://github.com/${employee.getGithub()}" target="_blank"> ${employee.getGithub()}</a></li>
       </ul>
     </div>
     </div>`    
