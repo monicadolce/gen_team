@@ -1,5 +1,5 @@
 # gen_team
-gen_team is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Jest unit tests have also been incorporated into the application to make sure the code works properly.
+gen_team is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Jest unit tests have also been incorporated into the application to make sure the code works properly. The index.html file is generated inside the dist folder. 
 
 ## User Story
 
@@ -10,10 +10,8 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Acceptance Criteria
 
-GIVEN a command-line application that accepts user input
-
-WHEN I am prompted for my team members and their information
-
+GIVEN a command-line application that accepts user input.
+WHEN I am prompted for my team members and their information.
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
 
 WHEN I click on an email address in the HTML
