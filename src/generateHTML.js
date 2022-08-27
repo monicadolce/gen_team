@@ -1,10 +1,14 @@
-// 
+// Function generates index.html 
 const generateHTML = (employees) => {
+  // Declare a variable as an empty string 
   let employeeHtml = ""
+  // For loop iterates through the employees array adding Manager, Engineers, Interns
+  // const employee takes in the data stored in the employees array 
+  // Methods from the parent class Employee and its subclasses together with the new variable employee render the value that is inserted into the index.html
   for (let index = 0; index < employees.length; index++) {
     const employee = employees[index];
-    if (employee.getRole()=== "Manager") {
-    employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
+    if (employee.getRole() === "Manager") {
+      employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
     <div class="card-header">
     <p>${employee.getName()}</p>
     <p>${employee.getRole()}</p>
@@ -15,7 +19,7 @@ const generateHTML = (employees) => {
       <li class="list-group-item">Office number: ${employee.getOfficeNumber()}</li>
     </ul>
   </div>
-  </div>`      
+  </div>`
     } else if (employee.getRole() === "Engineer") {
       employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
       <div class="card-header">
@@ -28,7 +32,7 @@ const generateHTML = (employees) => {
         <li class="list-group-item">GitHub username:<a href = "https://github.com/${employee.getGithub()}" target="_blank"> ${employee.getGithub()}</a></li>
       </ul>
     </div>
-    </div>`    
+    </div>`
     } else {
       employeeHtml = employeeHtml + `<div class="card" style="width: 18rem;">
       <div class="card-header">
@@ -41,11 +45,11 @@ const generateHTML = (employees) => {
         <li class="list-group-item">Office number: ${employee.getSchool()}</li>
       </ul>
     </div>
-    </div>`    
+    </div>`
     }
-    
+
   }
- return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
