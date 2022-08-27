@@ -1,4 +1,4 @@
-
+// 
 const generateHTML = (employees) => {
   let employeeHtml = ""
   for (let index = 0; index < employees.length; index++) {
